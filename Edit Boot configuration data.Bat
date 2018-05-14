@@ -1,19 +1,25 @@
-@ECHO OFF
-@Echo Disable Recovery
+:: Name : Disable Windows Search
+:: Description : Disable the Windows Search feature and hide icon in taskbar
+:: URL Source : http://www.softwareok.com/?seite=faq-Windows-10&faq=53
+:: Comment : You must restart Explorer. exe so that the icon is hidden
+::
+:: Disable Recovery
 bcdedit /set {default} recoveryenabled No
-@Echo Disable Windows Error Recovery on startup
+:: Disable Windows Error Recovery on startup
 bcdedit /set {default} bootstatuspolicy ignoreallfailures
-@Echo Enable Boot loging
+:: Enable Boot loging
 bcdedit /set {default} bootlog yes
-@echo verify
+:: verify
 bcdedit /timeout 0
-@Echo Enable quietboot
+:: Enable quietboot
 bcdedit /set {current} quietboot Yes
-@Echo Disable the F8 key during startup to prevent access to the Advanced startup options menu
+:: Disable the F8 key during startup to prevent access to the Advanced startup options menu
 bcdedit /set {globalsettings} advancedoptions false
-@Echo Disable the F10 key during startup to prevent access to the Advanced startup options menu
+:: Disable the F10 key during startup to prevent access to the Advanced startup options menu
 bcdedit /set {globalsettings} optionsedit false
-@Echo Suppress all Windows UI elements (logo, status indicator, and status message) during startup
-#bcdedit /set {globalsettings} bootuxdisabled on
-@Echo Disable Auto Recovery
+:: Suppress all Windows UI elements (logo, status indicator, and status message) during startup
+:: If your Windows is in UEFI mode you may want to keep the logo of the brand of the computers.
+:: In this case does not use this line
+:: bcdedit /set {globalsettings} bootuxdisabled on
+:: Disable Auto Recovery
 REG DELETE "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SPP\Clients" /f 

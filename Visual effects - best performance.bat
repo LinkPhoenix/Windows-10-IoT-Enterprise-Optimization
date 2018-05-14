@@ -1,5 +1,8 @@
-@ECHO OFF
-@Echo Optimized for Best appearance
+:: Name : Visual effects - best performance
+:: Description : Set the visual effects to best performance
+:: URL Source : none
+:: Comment : none
+::
 REG DELETE "HKCU\Control Panel\Desktop" /v UserPreferencesMask /f
 REG ADD "HKCU\Control Panel\Desktop\" /v UserPreferencesMask /t REG_BINARY /d 9e3e078012000000 /f
 REG DELETE "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\VisualEffects" /v VisualFXSetting /f
