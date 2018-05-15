@@ -1,5 +1,5 @@
 :: Name : Always Tablet Mode
-:: Description : Always set Tablet Mode when Sign in and never ask and do not chnage for Tablet Mode
+:: Description : Always set Tablet Mode when Sign in and never ask and do not change for Desktop Mode
 :: URL Source : None
 :: Comment : None
 ::
