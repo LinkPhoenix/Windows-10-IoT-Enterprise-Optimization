@@ -1,0 +1,7 @@
+:: Name : Disable Screen Edge SWIPE
+:: Description : Disable the fonciton screen edge swipe
+:: URL Source : https://www.tenforums.com/tutorials/48507-enable-disable-edge-swipe-screen-windows-10-a.html
+:: Comment : None
+::
+REG DELETE "HKCU\SOFTWARE\Policies\Microsoft\Windows\EdgeUI" /v "AllowEdgeSwipe" /f
+REG ADD "HKLM\SOFTWARE\Policies\Microsoft\Windows\EdgeUI" /v "AllowEdgeSwipe" "REG_DWORD" /d "0" /f
