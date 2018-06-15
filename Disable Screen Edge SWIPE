@@ -4,4 +4,4 @@
 :: Comment : None
 ::
 REG DELETE "HKCU\SOFTWARE\Policies\Microsoft\Windows\EdgeUI" /v "AllowEdgeSwipe" /f
-REG ADD "HKLM\SOFTWARE\Policies\Microsoft\Windows\EdgeUI" /v "AllowEdgeSwipe" "REG_DWORD" /d "0" /f
+REG ADD "HKLM\SOFTWARE\Policies\Microsoft\Windows\EdgeUI" /v "AllowEdgeSwipe" /t "REG_DWORD" /d "0" /f
