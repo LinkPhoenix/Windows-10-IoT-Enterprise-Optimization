@@ -1,3 +1,8 @@
+# INFORMATION
+
+I rewrote the script in POWERSHELL because BATCH could not answer all my needs, I do not know if it would put it here or on another deposit
+
+
 # Description
 Windows 10 IoT Enterprise optimization is a repository that references documentation on this version of Windows as well as Scripts to be able to customize your master image for industrial use
 
